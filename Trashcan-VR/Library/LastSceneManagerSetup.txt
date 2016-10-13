@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/User/Scene.unity
+- path: Assets/Trashcan.unity
   isLoaded: 1
   isActive: 1
