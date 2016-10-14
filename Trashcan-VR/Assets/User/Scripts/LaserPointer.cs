@@ -11,6 +11,7 @@ public class LaserPointer : MonoBehaviour {
 	void Start () {
 		if (indicator == null) {
 			indicator = GameObject.CreatePrimitive (PrimitiveType.Cube);
+			indicator.name = "indicator";
 		}
 	}
 	

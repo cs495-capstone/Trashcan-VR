@@ -3,25 +3,19 @@ using System.Collections;
 
 public class Teleport_demo : MonoBehaviour {
 
+	public GameObject indicator;
+
 	// Use this for initialization
 	void Start () {
-		
+		if (indicator == null) {
+			indicator = GameObject.Find ("indicator");
+		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		var x_val = this.transform.position.x;
-		var y_val = this.transform.position.y;
-		var z_val = this.transform.position.z;
-		if (Input.GetKeyDown (KeyCode.W)) {
-			z_val += 10;
-		} else if (Input.GetKeyDown (KeyCode.S)) {
-			z_val -= 10;
-		} else if (Input.GetKeyDown (KeyCode.A)) {
-			x_val -= 10;
-		} else if (Input.GetKeyDown (KeyCode.D)) {
-			x_val += 10;
+		if (Input.GetKeyDown(KeyCode.T)) {
+			this.transform.position = new Vector3(indicator.transform.position.x,this.transform.position.y,indicator.transform.position.z);
 		}
-		this.transform.position = new Vector3 (x_val, y_val, z_val);
 	}
 }
