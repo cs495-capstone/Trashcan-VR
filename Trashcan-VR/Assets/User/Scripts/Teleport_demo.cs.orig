@@ -29,7 +29,12 @@ public class Teleport_demo : MonoBehaviour {
 	/// becomes the postiion of the indicator.
 	/// </summary>
 	void Update () {
+<<<<<<< HEAD
+		if (Input.GetKeyDown(KeyCode.T)) {
+			foreach (var obj in GetComponentsInChildren<GameObject>
+=======
 		if (Input.GetKeyDown(code)) {
+>>>>>>> c04a8df9549a63d3cef793a00bdd7363dab100f8
 			this.transform.position = new Vector3(indicator.transform.position.x,this.transform.position.y,indicator.transform.position.z);
 		}
 	}
